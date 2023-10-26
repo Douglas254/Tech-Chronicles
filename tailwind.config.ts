@@ -10,6 +10,9 @@ const config: Config = {
     extend: {
       fontFamily: {
         vibes: ["Great Vibes", "cursive"],
+        mandali: ["Mandali", "sans-serif"],
+        alumni: ["Alumni Sans Collegiate One", "sans-serif"],
+        nosifer: ["Nosifer", "sans-serif"],
         "dancing-script": ["Dancing Script", "cursive"],
       },
       colors: {
