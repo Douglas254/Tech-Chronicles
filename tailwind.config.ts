@@ -13,6 +13,7 @@ const config: Config = {
         mandali: ["Mandali", "sans-serif"],
         alumni: ["Alumni Sans Collegiate One", "sans-serif"],
         nosifer: ["Nosifer", "sans-serif"],
+        tajawal: ["Tajawal", "sans-serif"],
         "dancing-script": ["Dancing Script", "cursive"],
       },
       colors: {

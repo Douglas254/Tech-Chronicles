@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="lg:max-w-[900px] lg:px-16 mx-auto shadow-xl py-8 min-h-screen flex flex-col px-8 border-t-2 border-[#9f4296] rounded-lg">
+        <div className="lg:max-w-[900px] bg-slate-100/5 lg:px-16 mx-auto shadow-xl py-8 min-h-screen flex flex-col px-4 md:px-8 border-t-2 border-[#9f4296] rounded-lg">
           <Navbar />
           <div className="flex-auto">{children}</div>
           <Footer />
