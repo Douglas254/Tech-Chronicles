@@ -1,11 +1,17 @@
+"use client";
+
 import Image from "next/image";
+import { signIn } from "next-auth/react";
 
 export default function SignInBtns() {
   return (
     <>
       <h1 className="text-center mt-8 font-nosifer">Sign In 🗝️</h1>
       <div className="mt-4 p-4 flex flex-col items-center justify-center gap-4">
-        <button className="flex items-center px-4 py-[7px] gap-4 border rounded-full hover:bg-slate-100/60 hover:shadow-md transition">
+        <button
+          onClick={() => signIn("github")}
+          className="flex items-center px-4 py-[7px] gap-4 border rounded-full hover:bg-slate-100/60 hover:shadow-md transition"
+        >
           <span>
             <Image
               src={"/github-logo.svg"}
@@ -16,7 +22,10 @@ export default function SignInBtns() {
           </span>
           Sign In With GitHub
         </button>
-        <button className="flex items-center px-4 py-[7px] gap-4 border rounded-full hover:bg-slate-100/60 hover:shadow-md transition">
+        <button
+          onClick={() => signIn("google")}
+          className="flex items-center px-4 py-[7px] gap-4 border rounded-full hover:bg-slate-100/60 hover:shadow-md transition"
+        >
           <span>
             <Image
               src={"/google-logo.svg"}
