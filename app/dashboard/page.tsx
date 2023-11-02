@@ -1,8 +1,17 @@
 import Post from "@/components/Post";
 import { postsData } from "@/data";
 import Link from "next/link";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "../api/auth/[...nextauth]/route";
+import { redirect } from "next/navigation";
 
-export default function Dashboard() {
+export default async function Dashboard() {
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
+    redirect("/sign-in");
+  }
+
   return (
     <div>
       <h1>My Posts 🚀</h1>
@@ -34,7 +43,13 @@ export default function Dashboard() {
         )
       ) : (
         <div className="py-6 ">
-          No posts created yet. <Link href={"/create-post"} className="underline hover:no-underline hover:text-dark">Create New</Link>
+          No posts created yet.{" "}
+          <Link
+            href={"/create-post"}
+            className="underline hover:no-underline hover:text-dark"
+          >
+            Create New
+          </Link>
         </div>
       )}
     </div>
