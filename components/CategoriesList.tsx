@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function CategoriesList() {
   return (
-    <div className="flex gap-2 lex-wrap">
+    <div className="flex gap-2 flex-wrap">
       {categoriesData &&
         categoriesData.map(({ name, id }) => (
           <Link
